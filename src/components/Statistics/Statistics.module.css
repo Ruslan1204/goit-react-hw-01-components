@@ -1,0 +1,26 @@
+
+
+.statistics{
+    width: 350px;
+
+    background-color: beige;
+}
+
+.titel{
+    text-align: center;
+    text-transform:uppercase;
+}
+
+.stat_list{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+
+    padding: 0;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

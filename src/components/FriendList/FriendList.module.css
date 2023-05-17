@@ -1,0 +1,10 @@
+
+.friend_list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+
+    width: 350px;
+    padding: 0;
+}

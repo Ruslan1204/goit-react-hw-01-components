@@ -1,0 +1,35 @@
+
+
+.item{
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    background-color: grey;
+
+    margin-bottom: 10px;
+    border-radius: 5%;
+}
+
+.status{
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    background-color: black;
+
+    border-radius: 50%;
+}
+
+.true{
+    background-color: greenyellow;
+}
+
+.false{
+    background-color: red;
+}
+
+.avatar{
+    margin-right: 5px;
+}
