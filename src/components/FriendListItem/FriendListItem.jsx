@@ -14,5 +14,5 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
 FriendListItem.propTypres = {
   avatar: PropTypres.string,
   name: PropTypres.string,
-  // isOnline: PropTypes.bool,
+  isOnline: PropTypres.bool,
 };
