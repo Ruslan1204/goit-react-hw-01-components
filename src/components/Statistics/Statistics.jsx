@@ -4,7 +4,8 @@ import css from './Statistics.module.css'
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
-      {title && (<h2 className={css.titel}>{title}</h2>)} 
+      {title.length > 0  && (<h2 className={css.titel}>{title}</h2>)} 
+  
 
       <ul className={css.stat_list}>
         {' '}
