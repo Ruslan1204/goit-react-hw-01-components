@@ -12,7 +12,7 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
 };
 
 FriendListItem.propTypres = {
-  avatar: PropTypres.string,
-  name: PropTypres.string,
-  isOnline: PropTypres.bool,
+  avatar: PropTypres.string.isRequired,
+  name: PropTypres.string.isRequired,
+  isOnline: PropTypres.bool.isRequired,
 };

@@ -13,5 +13,7 @@ export const FriendList = ({ friends }) => {
 };
 
 FriendList.propTypres = {
-  friends: PropTypres.string,
+  friends: PropTypres.arrayOf(PropTypres.shape({ 
+    id:PropTypres.number.isRequired,
+  })),
 };

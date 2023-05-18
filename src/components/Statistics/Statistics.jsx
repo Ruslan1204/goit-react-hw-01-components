@@ -4,14 +4,14 @@ import css from './Statistics.module.css'
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
-      <h2 className={css.titel}>{title}</h2>
+      {title && (<h2 className={css.titel}>{title}</h2>)} 
 
       <ul className={css.stat_list}>
         {' '}
-        {stats.map(stat => (
-          <li className={css.item} key={stat.id}>
-            <span className="label">{stat.label}</span>
-            <span className="percentage">{stat.percentage}</span>
+        {stats.map(({id,label,percentage}) => (
+          <li className={css.item} key={id}>
+            <span className="label">{label}</span>
+            <span className="percentage">{percentage}</span>
           </li>
         ))}
       </ul>
@@ -20,6 +20,10 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypres = {
-  title: PropTypres.string,
-  stats: PropTypres.number,
+  title: PropTypres.string.isRequired,
+  stats: PropTypres.arrayOf(PropTypres.shape({ 
+    id:PropTypres.string.isRequired,
+    label:PropTypres.string.isRequired,
+    percentage:PropTypres.number.isRequired,
+  })),
 };

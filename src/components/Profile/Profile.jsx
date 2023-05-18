@@ -1,9 +1,9 @@
 import PropTypres from 'prop-types';
 import css from "./Profile.module.css"
 
-console.log(css)
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
+const {followers,views,likes} = stats;
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -16,15 +16,15 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       <ul className={css.stats}>
         <li className={css.stats_list}>
           <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <span className="quantity">{followers}</span>
         </li>
         <li className={css.stats_list}>
           <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
+          <span className="quantity">{views}</span>
         </li>
         <li className={css.stats_list}>
           <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <span className="quantity">{likes}</span>
         </li>
       </ul>
     </div>
@@ -32,9 +32,13 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
 };
 
 Profile.propTypres = {
-  username: PropTypres.string,
-  tag: PropTypres.string,
-  location: PropTypres.string,
-  avatar: PropTypres.string,
-  stats: PropTypres.string,
+  username: PropTypres.string.isRequired,
+  tag: PropTypres.string.isRequired,
+  location: PropTypres.string.isRequired,
+  avatar: PropTypres.string.isRequired,
+  stats: PropTypres.objectOf({
+    followers: PropTypres.number.isRequired,
+    views:PropTypres.number.isRequired,
+    likes:PropTypres.number.isRequired,
+  }),
 };
