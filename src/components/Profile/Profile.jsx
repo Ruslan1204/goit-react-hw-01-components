@@ -31,7 +31,7 @@ const {followers,views,likes} = stats;
   );
 };
 
-Profile.propTypres = {
+Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,

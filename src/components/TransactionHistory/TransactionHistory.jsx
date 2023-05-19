@@ -31,7 +31,7 @@ export const TransactionHistory = ({ items }) => {
   );
 };
 
-TransactionHistory.propTypres = {
+TransactionHistory.propTypes = {
   items:PropTypes.arrayOf(PropTypes.shape({ 
     id:PropTypes.string.isRequired,
     type:PropTypes.string.isRequired,
