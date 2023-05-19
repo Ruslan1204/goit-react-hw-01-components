@@ -1,11 +1,10 @@
-import PropTypres from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './Statistics.module.css'
 
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
-      {title.length > 0  && (<h2 className={css.titel}>{title}</h2>)} 
-  
+      {title  && (<h2 className={css.titel}>{title}</h2>)} 
 
       <ul className={css.stat_list}>
         {' '}
@@ -21,10 +20,10 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypres = {
-  title: PropTypres.string.isRequired,
-  stats: PropTypres.arrayOf(PropTypres.shape({ 
-    id:PropTypres.string.isRequired,
-    label:PropTypres.string.isRequired,
-    percentage:PropTypres.number.isRequired,
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.shape({ 
+    id:PropTypes.string.isRequired,
+    label:PropTypes.string.isRequired,
+    percentage:PropTypes.number.isRequired,
   })),
 };
